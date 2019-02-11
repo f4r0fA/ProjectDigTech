@@ -3,6 +3,7 @@ package com.example.yuri.projectdigtech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+
 public class TelaInicial extends AppCompatActivity {
 
     @Override
