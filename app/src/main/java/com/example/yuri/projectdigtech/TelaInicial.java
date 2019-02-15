@@ -3,30 +3,51 @@ package com.example.yuri.projectdigtech;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 public class TelaInicial extends AppCompatActivity {
+
+    private ImageView logo;
+    private TextView versao;
+    private ProgressBar ldg;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial);
 
-        //aqui dentro as coisas acontecem antes da tela aparecer
-        try {
-            Thread.sleep(5000);
-            //Aqui a gente declara a itenção de interação entre duas classes! sempre use os parâmetros (classeatual.this, outraclasse.class)
-            Intent myIntent = new Intent(TelaInicial.this, TelaLogin.class);
+        logo = (ImageView) findViewById(R.id.logo) ;
+        versao = (TextView) findViewById(R.id.versao) ;
+        ldg = (ProgressBar) findViewById(R.id.ldg) ;
 
-            //O putExtra serve para passar valores de uma tela para outra, no geral, ele é opcional
-            myIntent.putExtra("nomeuser", "Yuri Fernandes Gomes"); //Lembre se do tipo do segundo parâmetro, nesse caso, String
+        Animation myanim = AnimationUtils.loadAnimation(this,R.anim.transicao) ;
+        logo.startAnimation(myanim);
+        versao.startAnimation(myanim);
+        ldg.startAnimation(myanim);
 
-            //Esse comando inicia a atividade, usando nossa intenção como parâmetro e passando quaisquer varáveis para a outra classa
-            TelaInicial.this.startActivity(myIntent);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+        final Intent i = new Intent(this,TelaLogin.class);
+        final Thread timer = new Thread() {
+            public void run() {
+                try {
+                    sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    startActivity(i);
+                    finish();
+                }
+            }
+        };
+        
+        timer.start();
 
     }
 }
