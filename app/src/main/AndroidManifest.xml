@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TelaLogin"></activity>
+        <activity android:name=".TelaLogin" />
+        <activity android:name=".TelaPrincipal" />
+        <activity android:name=".TelaRegistro"></activity>
     </application>
 
 </manifest>
