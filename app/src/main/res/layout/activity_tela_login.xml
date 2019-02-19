@@ -56,7 +56,7 @@
         android:layout_marginBottom="304dp"
         android:background="#55000000"
         android:ems="10"
-        android:hint="Usuario"
+        android:hint="Usuário"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
         android:textColor="@android:color/background_light"
@@ -103,7 +103,7 @@
     <TextView
         android:id="@+id/registrouser"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="23dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"

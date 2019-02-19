@@ -18,6 +18,7 @@ public class TelaLogin extends AppCompatActivity {
     private TextView tvinfo;
     private Button btnlogin;
     private int contador = 5;
+    private TextView registrouser;
 
 
 
@@ -31,6 +32,7 @@ public class TelaLogin extends AppCompatActivity {
         senha = (EditText)findViewById(R.id.senha);
         tvinfo = (TextView)findViewById(R.id.tvInfo);
         btnlogin = (Button)findViewById(R.id.btnlogin);
+        registrouser = (TextView)findViewById((R.id.registrouser));
 
 
 
@@ -38,6 +40,13 @@ public class TelaLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 validate(nome.getText() .toString(), senha.getText() .toString());
+            }
+        });
+
+        registrouser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TelaLogin.this, TelaRegistro.class));
             }
         });
     }
