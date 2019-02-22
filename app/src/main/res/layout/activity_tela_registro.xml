@@ -43,7 +43,7 @@
         android:layout_marginBottom="356dp"
         android:background="#55000000"
         android:ems="10"
-        android:hint="E-Mail"
+        android:hint="email@dominio.com"
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
         android:textColor="@android:color/white"

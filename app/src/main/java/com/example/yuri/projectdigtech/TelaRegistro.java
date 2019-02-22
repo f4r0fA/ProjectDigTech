@@ -55,7 +55,7 @@ public class TelaRegistro extends AppCompatActivity {
                                 Toast.makeText(TelaRegistro.this, "Ficamos felizes em ter você por aqui!", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(TelaRegistro.this, TelaLogin.class));
                             }else{
-                                Toast.makeText(TelaRegistro.this, "Aaah não :( revise os campos!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TelaRegistro.this, "Aaah não :( Usuário ja cadastrado.", Toast.LENGTH_SHORT).show();
                             }
 
                         }
@@ -96,12 +96,12 @@ public class TelaRegistro extends AppCompatActivity {
         String cosenha = etConfirmaSenha.getText().toString();
         String email = etuseremail.getText().toString();
 
-            if(nome.isEmpty() || senha.isEmpty() || cosenha.isEmpty() || email.isEmpty()){
-                makeText(this,"Nada de gracinhas, introduza seus dados corretamente.", LENGTH_SHORT);
-            }else{
-                result = true;
-            }
-             return result;
+        if(nome.isEmpty() || senha.isEmpty() || cosenha.isEmpty() || email.isEmpty()){
+            makeText(TelaRegistro.this,"Nada de gracinhas, introduza seus dados corretamente.", LENGTH_LONG).show();
+        }else{
+            result = true;
+        }
+        return result;
     }
 
 
