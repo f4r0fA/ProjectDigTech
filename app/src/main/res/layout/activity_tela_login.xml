@@ -18,11 +18,10 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:foregroundGravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/img1" />
 
     <EditText
@@ -57,7 +56,7 @@
         android:layout_marginBottom="288dp"
         android:background="@drawable/gradient_3"
         android:ems="10"
-        android:hint="Usuário"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
         android:textColor="@android:color/background_light"
