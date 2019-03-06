@@ -25,27 +25,6 @@
         app:srcCompat="@drawable/img1" />
 
     <EditText
-        android:id="@+id/senha"
-        android:layout_width="301dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="244dp"
-        android:background="@drawable/gradient_3"
-        android:ems="10"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textColor="@android:color/background_light"
-        android:textColorHint="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
         android:id="@+id/nome"
         android:layout_width="301dp"
         android:layout_height="40dp"
@@ -58,6 +37,27 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="301dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="244dp"
+        android:background="@drawable/gradient_3"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
         android:paddingLeft="15dp"
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/darker_gray"
@@ -119,4 +119,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvInfo"
         app:layout_constraintVertical_bias="0.913" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="343dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Esqueceu sua senha? Clique aqui"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senha" />
 </android.support.constraint.ConstraintLayout>
