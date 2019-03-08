@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/shoppinsMenu"
+        android:icon="@drawable/web_hi_res_512"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Carrinho"/>
+    <item
+        android:id="@+id/LogoutMenu"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:orderInCategory="300"
+        android:title="Logout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/SettingsMenu"
+        android:orderInCategory="200"
+        android:title="Configurações"
+        app:showAsAction="never" />
+
+
+</menu>

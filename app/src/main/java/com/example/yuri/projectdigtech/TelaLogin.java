@@ -62,8 +62,8 @@ public class TelaLogin extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(nome.getText() .toString().isEmpty() || senha.getText() .toString().isEmpty()){
-                    nome.setHint("Digite seu Email");
-                    senha.setHint("Digite sua Senha");
+                    nome.setError("Digite seu Email");
+                    senha.setError("Digite sua Senha");
                     AlertDialog.Builder builder = new AlertDialog.Builder(TelaLogin.this);
 
                     builder.setTitle("AVISO");
@@ -100,7 +100,6 @@ public class TelaLogin extends AppCompatActivity {
 
             firebaseAuth.signInWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
-
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
@@ -120,5 +119,5 @@ public class TelaLogin extends AppCompatActivity {
                     }
                 }
             });
-        }
+    }
 }
