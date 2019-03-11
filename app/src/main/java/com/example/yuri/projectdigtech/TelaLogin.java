@@ -22,12 +22,13 @@ import com.google.firebase.auth.FirebaseUser;
 public class TelaLogin extends AppCompatActivity {
 
 
-    private EditText nome;
+    private EditText email;
     private EditText senha;
     private TextView tvinfo;
     private Button btnlogin;
     private int contador = 5;
     private TextView registrouser;
+    private TextView forgotpassword;
 
     private FirebaseAuth firebaseAuth;
 
@@ -39,11 +40,12 @@ public class TelaLogin extends AppCompatActivity {
         setContentView(R.layout.activity_tela_login);
 
 
-        nome = (EditText)findViewById(R.id.nome);
+        email = (EditText)findViewById(R.id.email);
         senha = (EditText)findViewById(R.id.senha);
         tvinfo = (TextView)findViewById(R.id.tvInfo);
         btnlogin = (Button)findViewById(R.id.btnlogin);
         registrouser = (TextView)findViewById((R.id.registrouser));
+        forgotpassword = (TextView)findViewById(R.id.tvEsqueceuSenha);
 
 
 
@@ -61,8 +63,8 @@ public class TelaLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(nome.getText() .toString().isEmpty() || senha.getText() .toString().isEmpty()){
-                    nome.setError("Digite seu Email");
+                if(email.getText() .toString().isEmpty() || senha.getText() .toString().isEmpty()){
+                    email.setError("Digite seu Email");
                     senha.setError("Digite sua Senha");
                     AlertDialog.Builder builder = new AlertDialog.Builder(TelaLogin.this);
 
@@ -80,7 +82,7 @@ public class TelaLogin extends AppCompatActivity {
                     alertDialog.show();
                 }
                 else{
-                    validate(nome.getText() .toString(), senha.getText() .toString());
+                    validate(email.getText() .toString(), senha.getText() .toString());
                 }
 
             }
@@ -93,6 +95,13 @@ public class TelaLogin extends AppCompatActivity {
                 startActivity(new Intent(TelaLogin.this, TelaRegistro.class));
             }
         });
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent (TelaLogin.this, SenhaActivity.class));
+            }
+        });
+
     }
 
         private void validate (String email, String senha){

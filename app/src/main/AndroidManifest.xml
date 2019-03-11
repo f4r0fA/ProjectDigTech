@@ -18,10 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TelaLogin"/>
-        <activity android:name=".TelaPrincipal"
-                  android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"/>
-        <activity android:name=".TelaRegistro"/>
+        <activity android:name=".TelaLogin" />
+        <activity
+            android:name=".TelaPrincipal"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+        <activity android:name=".TelaRegistro" />
+        <activity android:name=".SenhaActivity"></activity>
     </application>
 
 </manifest>

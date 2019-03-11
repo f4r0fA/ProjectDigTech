@@ -18,14 +18,14 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:foregroundGravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/nome"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img1" />
 
     <EditText
-        android:id="@+id/nome"
+        android:id="@+id/email"
         android:layout_width="301dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -113,6 +113,7 @@
         android:gravity="center"
         android:text="Novo Usuario? Cadastre-se Aqui!"
         android:textColor="@android:color/white"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
@@ -121,7 +122,7 @@
         app:layout_constraintVertical_bias="0.913" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvEsqueceuSenha"
         android:layout_width="343dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -133,6 +134,7 @@
         android:gravity="center"
         android:text="Esqueceu sua senha? Clique aqui"
         android:textColor="@android:color/white"
+        android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/btnlogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
