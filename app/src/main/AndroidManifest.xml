@@ -23,7 +23,7 @@
             android:name=".TelaPrincipal"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity android:name=".TelaRegistro" />
-        <activity android:name=".SenhaActivity"></activity>
+        <activity android:name=".TelaReSenha"></activity>
     </application>
 
 </manifest>

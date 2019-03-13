@@ -1,6 +1,5 @@
 package com.example.yuri.projectdigtech;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +13,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SenhaActivity extends AppCompatActivity {
+public class TelaReSenha extends AppCompatActivity {
 
     private EditText SenhaEmail;
     private Button ResetSenha;
@@ -36,17 +35,17 @@ public class SenhaActivity extends AppCompatActivity {
                 String useremail = SenhaEmail.getText().toString().trim();
 
                 if(useremail.equals("")){
-                    Toast.makeText(SenhaActivity.this, "Por Gentileza, entre com um email.", Toast.LENGTH_SHORT).show() ;
+                    Toast.makeText(TelaReSenha.this, "Entre com um email.", Toast.LENGTH_SHORT).show() ;
                 }else{
                     firebaseAuth.sendPasswordResetEmail(useremail).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(SenhaActivity.this, "Email enviado para o endereço correspondido", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TelaReSenha.this, "Email enviado para o endereço correspondente", Toast.LENGTH_LONG).show();
                                 finish();
-                                startActivity(new Intent(SenhaActivity.this, TelaLogin.class));
+                                startActivity(new Intent(TelaReSenha.this, TelaLogin.class));
                             }else{
-                                Toast.makeText(SenhaActivity.this, "Entre com um endereço Registrado", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TelaReSenha.this, "Entre com um endereço valido", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

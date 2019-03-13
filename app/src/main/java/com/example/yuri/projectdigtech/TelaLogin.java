@@ -98,7 +98,7 @@ public class TelaLogin extends AppCompatActivity {
         forgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent (TelaLogin.this, SenhaActivity.class));
+                startActivity(new Intent (TelaLogin.this, TelaReSenha.class));
             }
         });
 
@@ -116,7 +116,7 @@ public class TelaLogin extends AppCompatActivity {
                         startActivity(new Intent(TelaLogin.this, TelaPrincipal.class));
                         Toast.makeText(TelaLogin.this, "Ebaaa, Logado com sucesso!", Toast.LENGTH_SHORT).show();
                     }else{
-                        tvinfo.setText("Tentativas Restantes: " + String.valueOf(contador));;
+                        tvinfo.setText("Tentativas Restantes: "+ String.valueOf(contador));
                         Toast.makeText(TelaLogin.this, "Usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
                         contador--;
                         if(contador==0){

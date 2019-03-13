@@ -4,25 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#303030"
+    android:background="#DCDCDC"
     tools:context=".TelaPrincipal">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="64dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/buttons"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/burgerefritas" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/buttons"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/soda" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/buttons"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/prato" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="231dp"
-        android:layout_height="143dp"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="LOGADO COM SUCESSO"
-        android:textColor="@android:color/white"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Selecione sua fome por categoria:"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091" />
 </android.support.constraint.ConstraintLayout>
