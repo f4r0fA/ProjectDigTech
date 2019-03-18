@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DCDCDC"
-    tools:context=".TelaPrincipal">
+    tools:context=".TelaPrincipal"
+    tools:layout_editor_absoluteY="81dp">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/lanche"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginStart="40dp"
@@ -22,7 +23,7 @@
         app:srcCompat="@drawable/burgerefritas" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/bebidas"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginStart="8dp"
@@ -34,27 +35,23 @@
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/lanche"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/soda" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/pratos"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="224dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttons"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/lanche"
+        app:layout_constraintVertical_bias="0.044"
         app:srcCompat="@drawable/prato" />
 
     <TextView
@@ -69,9 +66,60 @@
         android:layout_marginBottom="8dp"
         android:text="Selecione sua fome por categoria:"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/pratos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.091" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical|center"
+        android:text="Ou se preferir pesquise restaurantes proximos a você"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/pesquisalocalidade"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#c3c3c3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+    <ImageButton
+        android:id="@+id/sorvetes"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/buttons"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toEndOf="@+id/pratos"
+        app:layout_constraintTop_toBottomOf="@+id/bebidas"
+        app:layout_constraintVertical_bias="0.042"
+        app:srcCompat="@drawable/icecream" />
+
 </android.support.constraint.ConstraintLayout>
