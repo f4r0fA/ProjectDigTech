@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Tela_BemVindo"></activity>
         <activity android:name=".TelaInicial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +29,11 @@
         <activity
             android:name=".TelaBebidas"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
-        <activity android:name=".TelaLanche"></activity>
+        <activity android:name=".TelaLanche" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

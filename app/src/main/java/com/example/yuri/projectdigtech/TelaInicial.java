@@ -32,7 +32,7 @@ public class TelaInicial extends AppCompatActivity {
         versao.startAnimation(myanim);
         ldg.startAnimation(myanim);
 
-        final Intent i = new Intent(this,TelaLogin.class);
+        final Intent i = new Intent(this,Tela_BemVindo.class);
         final Thread timer = new Thread() {
             public void run() {
                 try {

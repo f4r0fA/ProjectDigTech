@@ -44,7 +44,6 @@ public class TelaLogin extends AppCompatActivity {
         senha = (EditText)findViewById(R.id.senha);
         tvinfo = (TextView)findViewById(R.id.tvInfo);
         btnlogin = (Button)findViewById(R.id.btnlogin);
-        registrouser = (TextView)findViewById((R.id.registrouser));
         forgotpassword = (TextView)findViewById(R.id.tvEsqueceuSenha);
 
 
@@ -89,12 +88,6 @@ public class TelaLogin extends AppCompatActivity {
         });
 
 
-        registrouser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(TelaLogin.this, TelaRegistro.class));
-            }
-        });
         forgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
