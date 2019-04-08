@@ -15,8 +15,12 @@
       },
       "oauth_client": [
         {
-          "client_id": "100564046136-16fad0odt8t9p8cdmbj1538kddavk3mm.apps.googleusercontent.com",
-          "client_type": 3
+          "client_id": "100564046136-eth8f75hnb2gsq3q27nvvcegr6ib4tm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yuri.projectdigtech",
+            "certificate_hash": "6adaa5773c337791b3232dd2705a5768aaab1ced"
+          }
         }
       ],
       "api_key": [
@@ -25,15 +29,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100564046136-16fad0odt8t9p8cdmbj1538kddavk3mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
