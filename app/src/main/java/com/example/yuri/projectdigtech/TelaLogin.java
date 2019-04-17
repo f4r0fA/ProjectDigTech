@@ -24,10 +24,8 @@ public class TelaLogin extends AppCompatActivity {
 
     private EditText email;
     private EditText senha;
-    private TextView tvinfo;
     private Button btnlogin;
     private int contador = 5;
-    private TextView registrouser;
     private TextView forgotpassword;
 
     private FirebaseAuth firebaseAuth;
@@ -42,7 +40,6 @@ public class TelaLogin extends AppCompatActivity {
 
         email = (EditText)findViewById(R.id.email);
         senha = (EditText)findViewById(R.id.senha);
-        tvinfo = (TextView)findViewById(R.id.tvInfo);
         btnlogin = (Button)findViewById(R.id.btnlogin);
         forgotpassword = (TextView)findViewById(R.id.tvEsqueceuSenha);
 
@@ -109,13 +106,11 @@ public class TelaLogin extends AppCompatActivity {
                         startActivity(new Intent(TelaLogin.this, TelaPrincipal.class));
                         Toast.makeText(TelaLogin.this, "Ebaaa, Logado com sucesso!", Toast.LENGTH_SHORT).show();
                     }else{
-                        tvinfo.setText("Tentativas Restantes: "+ String.valueOf(contador));
                         Toast.makeText(TelaLogin.this, "Usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
                         contador--;
                         if(contador==0){
                             btnlogin.setEnabled(false);
                             btnlogin.setText("Não autorizado");
-                            tvinfo.setText("Por motivos de segurança, tente novamente mais tarde :(");
                         }
 
                     }

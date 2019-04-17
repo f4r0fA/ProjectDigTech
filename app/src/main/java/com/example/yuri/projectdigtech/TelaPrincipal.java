@@ -46,7 +46,13 @@ public class TelaPrincipal extends AppCompatActivity {
             public void onClick(View v) {
              startActivity(new Intent (TelaPrincipal.this, TelaLanche.class));
             }
-    });
+         });
+        sorvetes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               startActivity(new Intent(TelaPrincipal.this, TelaSorvetes.class));
+            }
+        });
 
 }
     private void Logout(){
