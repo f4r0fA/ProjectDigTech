@@ -9,7 +9,7 @@ import android.widget.Button;
 public class Tela_BemVindo extends AppCompatActivity {
 
     private Button btncadastrar01;
-    private Button btnloggin;
+    private Button btnentrar;
 
 
     @Override
@@ -18,9 +18,9 @@ public class Tela_BemVindo extends AppCompatActivity {
         setContentView(R.layout.activity_tela__bem_vindo);
 
         btncadastrar01 = (Button)findViewById(R.id.btncadastrar01);
-        btnloggin = (Button)findViewById(R.id.btnloggin);
+        btnentrar = (Button)findViewById(R.id.btnentrar);
 
-        btnloggin.setOnClickListener(new View.OnClickListener() {
+        btnentrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Tela_BemVindo.this, TelaLogin.class));

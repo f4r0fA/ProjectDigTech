@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.GridLayout;
+import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -15,10 +16,12 @@ public class TelaPrincipal extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
 
     //-----------------------------
-    private ImageButton lanche;
-    private ImageButton bebidas;
-    private ImageButton pratos;
-    private ImageButton sorvetes;
+
+    private GridLayout mainGrid;
+    private ImageView lanche;
+    private ImageView bebidas;
+    private ImageView pratos;
+    private ImageView sorvetes;
 
     //-----------------------------
 
@@ -28,11 +31,11 @@ public class TelaPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_tela_principal);
 
         firebaseAuth = FirebaseAuth.getInstance();
-
-        bebidas = (ImageButton)findViewById(R.id.bebidas);
-        lanche = (ImageButton)findViewById(R.id.lanche);
-        pratos = (ImageButton)findViewById(R.id.pratos);
-        sorvetes = (ImageButton)findViewById(R.id.sorvetes);
+        mainGrid = (GridLayout) findViewById(R.id.mainGrid);
+        bebidas = (ImageView)findViewById(R.id.bebidas);
+        lanche = (ImageView)findViewById(R.id.lanche);
+        pratos = (ImageView)findViewById(R.id.pratos);
+        sorvetes = (ImageView)findViewById(R.id.sorvetes);
 
 
         bebidas.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +54,12 @@ public class TelaPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                startActivity(new Intent(TelaPrincipal.this, TelaSorvetes.class));
+            }
+        });
+        pratos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TelaPrincipal.this, TelaPratos.class));
             }
         });
 

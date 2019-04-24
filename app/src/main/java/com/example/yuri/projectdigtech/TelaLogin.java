@@ -1,5 +1,6 @@
 package com.example.yuri.projectdigtech;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class TelaLogin extends AppCompatActivity {
     private Button btnlogin;
     private int contador = 5;
     private TextView forgotpassword;
-
+    private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
 
@@ -43,9 +44,8 @@ public class TelaLogin extends AppCompatActivity {
         btnlogin = (Button)findViewById(R.id.btnlogin);
         forgotpassword = (TextView)findViewById(R.id.tvEsqueceuSenha);
 
-
-
-
+        progressDialog = ProgressDialog.show(this, "", "Carregando");
+        progressDialog.dismiss();
         firebaseAuth = FirebaseAuth.getInstance();
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -58,7 +58,6 @@ public class TelaLogin extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if(email.getText() .toString().isEmpty() || senha.getText() .toString().isEmpty()){
                     email.setError("Digite seu Email");
                     senha.setError("Digite sua Senha");
@@ -77,10 +76,10 @@ public class TelaLogin extends AppCompatActivity {
                     AlertDialog alertDialog = builder.create();
                     alertDialog.show();
                 }
-                else{
-                    validate(email.getText() .toString(), senha.getText() .toString());
+                else {
+                    validate(email.getText().toString(), senha.getText().toString());
+                    progressDialog.show();
                 }
-
             }
         });
 
@@ -106,6 +105,7 @@ public class TelaLogin extends AppCompatActivity {
                         startActivity(new Intent(TelaLogin.this, TelaPrincipal.class));
                         Toast.makeText(TelaLogin.this, "Ebaaa, Logado com sucesso!", Toast.LENGTH_SHORT).show();
                     }else{
+                        progressDialog.dismiss();
                         Toast.makeText(TelaLogin.this, "Usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
                         contador--;
                         if(contador==0){

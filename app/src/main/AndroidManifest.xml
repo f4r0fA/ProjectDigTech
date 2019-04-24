@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".TelaSorvetes"></activity>
+        <activity android:name=".TelaPratos"></activity>
+        <activity android:name=".TelaSorvetes" />
         <activity android:name=".Tela_BemVindo" />
         <activity android:name=".TelaInicial">
             <intent-filter>
