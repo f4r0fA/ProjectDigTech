@@ -24,6 +24,7 @@ public class Tela_BemVindo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Tela_BemVindo.this, TelaLogin.class));
+                finish();
             }
         });
         btncadastrar01.setOnClickListener(new View.OnClickListener() {

@@ -104,6 +104,7 @@ public class TelaLogin extends AppCompatActivity {
                     if(task.isSuccessful()){
                         startActivity(new Intent(TelaLogin.this, TelaPrincipal.class));
                         Toast.makeText(TelaLogin.this, "Ebaaa, Logado com sucesso!", Toast.LENGTH_SHORT).show();
+                        finish();
                     }else{
                         progressDialog.dismiss();
                         Toast.makeText(TelaLogin.this, "Usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
